@@ -11,7 +11,6 @@
     <!-- Header Section -->
     <header>
         <nav>
-            <h1 id= "myname">SIYABONGA NGUZA</h1>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -24,10 +23,10 @@
     <!-- Main Section -->
     <main>
         <!-- Home Section -->
-        <section id="home">
+        <section id="home" class = "background" >
             <div class="intro">
                 <h2>Welcome to My Portfolio</h2>
-                <p>Hi, I’m [Your Name], a [Your Role]. Let's build something amazing together.</p>
+                <p>Hi, I’m Siyabonga Nguza, I am an aspiring software developer. Let's build something amazing together.</p>
                 <a href="#projects" class="btn">View Projects</a>
             </div>
         </section>
@@ -35,36 +34,44 @@
         <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
-            <p>I'm a passionate [Your Role] with experience in [Technology/Field]. I enjoy solving complex problems and creating impactful solutions.</p>
+            <p>Hello! I'm a Software Engineering student at WeThinkCode_ with a strong work ethic and a passion for solving complex problems through code. My journey in tech is fueled by a deep curiosity and an unyielding commitment to continuous learning.
+                I’m particularly interested in cybersecurity, where I’m eager to explore the ever-evolving landscape of digital security. Driven by a blend of creativity and technical skills,
+                I aim to build innovative solutions that make an impact. When I'm not coding, I’m likely expanding my knowledge, refining my skills, or collaborating with others on exciting projects.</p>
         </section>
 
         <!-- Projects Section -->
         <section id="projects">
             <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of the project. What problem it solves, and key technologies used.</p>
-                <a href="https://github.com/yourgithub/project1" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of the project. What problem it solves, and key technologies used.</p>
-                <a href="https://github.com/yourgithub/project2" target="_blank">View on GitHub</a>
+            <div class="project-container">
+                <div class="project">
+                    <h3>Banking Application</h3>
+                    <p>A simple bank account web application built with Spring Boot, Spring Security, and SQLite. The application allows users to register, log in,
+                        and access secure account-related features.</p>
+                    <a href="https://github.com/s-nguza/Banking/" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project">
+                    <h3>SnakeGame</h3>
+                    <p>A classic Snake game developed in Java. The game challenges players to control a snake, collect apples, and avoid obstacles while progressing through multiple levels,
+                        each with increasing difficulty.</p>
+                    <a href="https://github.com/s-nguza/SnakeGame" target="_blank">View on GitHub</a>
+                </div>
+                <!-- Add more projects here as needed -->
             </div>
         </section>
 
-        <!-- Skills Section -->
+
         <section id="skills">
             <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Python</li>
-                <li>Java</li>
-            </ul>
+            <div class="badge-container">
+                <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML Badge">
+                <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS Badge">
+                <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Badge">
+                <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React Badge">
+                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Badge">
+                <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white" alt="Java Badge">
+            </div>
         </section>
+
 
         <!-- Contact Section -->
         <section id="contact">
@@ -86,7 +93,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        <p>&copy; 2024 Siyabonga. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

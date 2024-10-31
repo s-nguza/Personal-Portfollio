@@ -1,6 +1,6 @@
 /* Basic styles */
 * {
-    margin: 0;
+    margin: 10;
     padding: 0;
     box-sizing: border-box;
 }
@@ -9,13 +9,15 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: grey;
-    color: #c3bebe;
+    background-color: white;
+    color: green;
+    height: 100vh;
 }
+
 
 header {
     background-color: #333;
-    color: white;
+    color: blue;
     padding: 10px 20px;
     text-align: center;
 }
@@ -43,18 +45,22 @@ section {
     padding: 50px 20px;
 }
 
-#home {
-    /* background: url('images/background.jpg') no-repeat center center/cover; */
-    height: 100vh;
+#home.background {
+    background-image: url("dark-background-abstract-background-network-3d-background-7680x4320-8324.png"); /* Add the path to your image */
+    background-size: cover;            /* Ensures the image covers the entire section */
+    background-position: center;       /* Centers the image */
+    background-repeat: no-repeat;      /* Prevents the image from repeating */
+    color: white;                      /* Adjusts text color for readability */
+    height: 100vh;                     /* Makes the section full screen height */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
     text-align: center;
 }
 
+
 #about, #projects, #skills, #contact {
-    background-color: black;
+    background-color: white;
     margin-bottom: 20px;
 }
 
@@ -62,12 +68,33 @@ section {
     margin: 10px 0;
 }
 
+#about {
+    text-align: center;
+    max-width: 800px;       /* Limits the width to make the text more readable */
+    margin: 0 auto;         /* Centers the section horizontally */
+    padding: 20px;
+}
+
+.badge-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between badges */
+    justify-content: center;
+    padding: 20px;
+}
+
+.badge-container img {
+    display: inline-block;
+}
+
+
 .project h3 {
     margin-bottom: 10px;
 }
 
 form {
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -87,6 +114,52 @@ form button {
     border-radius: 5px;
     cursor: pointer;
 }
+#projects {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between project cards */
+    justify-content: center;
+}
+
+.project {
+    background-color: #f8f9fa;      /* Light background color for the container */
+    border: 1px solid #ddd;         /* Adds a border */
+    border-radius: 8px;             /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    width: 300px;                   /* Sets a fixed width for consistency */
+    text-align: left;
+    transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+.project p {
+    font-size: 14px;
+    color: #555;
+}
+
+.project a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
 
 footer {
     background-color: #333;

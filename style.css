@@ -14,7 +14,7 @@
     object-fit: cover;
     z-index: -1;
 }
-
+ 
 
 .btn:hover {
     background: #0056b3;
@@ -116,6 +116,10 @@ section {
 }
 
 #about {
+    background-image: url("images/pexels-francesco-ungaro-998641.jpg"); /* Image path */
+    background-size: cover;            /* Ensures the image covers the entire section */
+    background-position: center;       /* Centers the image */
+    background-repeat: no-repeat;    
     text-align: center;
     max-width: 800px;       /* Limits the width to make the text more readable */
     margin: 0 auto;         /* Centers the section horizontally */
@@ -161,9 +165,20 @@ form button {
     border-radius: 5px;
     cursor: pointer;
 }
-#projects {
+#projects {    
+    background-image: url("images/pexels-francesco-ungaro-998641.jpg"); /* Image path */
+    background-size: cover;            /* Ensures the image covers the entire section */
+    background-position: center;       /* Centers the image */
+    background-repeat: no-repeat;    
     padding: 50px 20px;
     text-align: center;
+}
+#skill{
+    background-image: url("images/pexels-francesco-ungaro-998641.jpg"); /* Image path */
+    background-size: cover;            /* Ensures the image covers the entire section */
+    background-position: center;       /* Centers the image */
+    background-repeat: no-repeat; 
+
 }
 
 .project-container {

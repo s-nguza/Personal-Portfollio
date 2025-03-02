@@ -21,3 +21,27 @@ form.addEventListener('submit', function (event) {
         alert('Please fill out all fields before submitting the form.');
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const introText = document.querySelector(".intro p");
+
+    function restartAnimation() {
+        introText.style.animation = "none";  // Remove animation
+        void introText.offsetWidth;  // Trigger reflow (forces the browser to restart the animation)
+        introText.style.animation = "typing 4s steps(40, end) forwards, blink 0.7s infinite";
+    }
+
+    // Detect when the section is in view
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    restartAnimation(); // Restart animation when section appears
+                }
+            });
+        },
+        { threshold: 0.5 } // Trigger when at least 50% of the section is visible
+    );
+
+    observer.observe(document.querySelector("#home"));
+});

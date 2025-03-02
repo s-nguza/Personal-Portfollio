@@ -15,11 +15,33 @@
     z-index: -1;
 }
 
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Styling for the text container */
+.intro p {
+    font-size: 2rem; /* Make text bigger */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Make text readable */
+    color: white;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides text until typed */
+    border-right: 4px solid white; /* Cursor effect */
+    width: 0; /* Start hidden */
+    animation: typing 4s steps(40, end) forwards, blink 0.7s infinite;
+}
+
 
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: black;
     color: green;
     height: 100vh;
 }
@@ -70,7 +92,6 @@ section {
 
 
 #about, #projects, #skills, #contact {
-    background-color: white;
     margin-bottom: 20px;
 }
 

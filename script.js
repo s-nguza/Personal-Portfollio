@@ -54,3 +54,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", showBadges);
 });
+document.addEventListener("DOMContentLoaded", function () {
+    let video = document.getElementById("background-video");
+
+    video.addEventListener("ended", function () {
+        this.currentTime = 0;  // Restart video manually
+        this.play();
+    });
+
+    video.play().catch(error => console.error("Autoplay blocked:", error));
+});

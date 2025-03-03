@@ -31,18 +31,77 @@
     50% { border-color: transparent; }
 }
 
-/* Styling for the text container */
-.intro p {
-    font-size: 2rem; /* Make text bigger */
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Make text readable */
-    color: white;
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: hidden; /* Hides text until typed */
-    border-right: 4px solid white; /* Cursor effect */
-    width: 0; /* Start hidden */
-    animation: typing 4s steps(40, end) forwards, blink 0.7s infinite;
+/* Styling for the container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
 }
+
+/* Animated intro text */
+.intro-text {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInSlide 2s ease-in-out forwards;
+}
+
+/* "I AM A" static text */
+.static-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards 1.5s;
+}
+
+/* Animated job titles */
+.animated-text {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.animated-text li {
+    font-size: 1.8rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlide 2s ease-in-out forwards;
+    pointer-events: none; /* Removes cursor interaction */
+}
+
+/* Different start times for each title */
+.animated-text li:nth-child(1) {
+    animation-delay: 3s;
+}
+
+.animated-text li:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.animated-text li:nth-child(3) {
+    animation-delay: 5s;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 
 
@@ -137,8 +196,8 @@ section {
     background-repeat: no-repeat;
     text-align: center;
     max-width: 900px;
-    margin: 0 auto;
-    padding: 80px; /* Increased padding */
+    padding: 40px; /* Reduced padding */
+    margin-top: -30px; /* Negative margin to pull it closer */
     opacity: 0; /* Start hidden */
     transform: translateY(50px); /* Start lower */
     animation: fadeInSlide 1.5s ease-out forwards; /* Run animation */

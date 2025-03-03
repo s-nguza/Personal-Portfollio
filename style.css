@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 #background-video {
     position: absolute;
     top: 0;
@@ -54,15 +55,38 @@ body {
 
 
 header {
-    background-color: #5c35e8;
-    color: blue;
+    background-color: #211f28;
     padding: 10px 20px;
-    text-align: right;
+    width:100%;
 }
 
-header h1 {
-    display: inline-block;
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes items to opposite sides */
 }
+
+.pc img {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    color : white;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+ul li {
+    display: inline;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+}
+
 
 nav ul {
     list-style: none;
@@ -157,27 +181,7 @@ section {
     margin-bottom: 10px;
 }
 
-form {
-    max-width: 500px;
-    margin: 0 auto;
-}
 
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    background-color: #333;
-    color: pick;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 #projects {    
     background-image: url("images/pexels-francesco-ungaro-998641.jpg"); /* Image path */
     background-size: cover;            /* Ensures the image covers the entire section */
@@ -202,7 +206,7 @@ form button {
     font-weight: bold;
     text-align: center; /* Ensure heading is centered */
     color: #007bff; /* Adjust color for visibility */
-    margin-bottom: 20px; /* Add spacing below heading */
+    margin-bottom: 50px; /* Add spacing below heading */
 }
 
 /*  */
@@ -230,8 +234,8 @@ form button {
 }
 
 .project {
-    background-color: #f8f9fa;      /* Light background color for the container */
-    border: 1px solid #ddd;         /* Adds a border */
+    background-color: #07111a;      /* Light background color for the container */
+    border: 1px solid #4f3a3a;         /* Adds a border */
     border-radius: 8px;             /* Rounds the corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     padding: 20px;
@@ -281,8 +285,9 @@ footer {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
+    align-items: top;
+    /* text-align: center; */
     text-align: center;
     /* color: white; */
     padding: 50px 0;
@@ -290,7 +295,7 @@ footer {
 
 h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 
 .social-links {

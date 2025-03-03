@@ -20,16 +20,6 @@
     background: #0056b3;
 }
 
-.icon-link img {
-    width: 20px;
-    height: 20px;
-    margin: 0 10px;
-    transition: 0.3s;
-}
-
-.icon-link img:hover {
-    transform: scale(1.2);
-}
 
 @keyframes typing {
     from { width: 0; }
@@ -161,9 +151,6 @@ section {
     padding: 20px;
 } */
 
-/* .badge-container img {
-    display: inline-block;
-} */ */
 
 
 .project h3 {
@@ -297,7 +284,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    /* color: white; */
     padding: 50px 0;
 }
 
@@ -312,23 +299,33 @@ h2 {
     align-items: center;
 }
 
-.social-links a {
+.social-links  {
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease;
 }
 
-.social-links a i { /* Styling for WhatsApp icon */
-    font-size: 50px;
-    color: white;
-}
+
 
 .icon-link img { /* Styling for LinkedIn & GitHub images */
     width: 50px; /* Adjust as needed */
     height: 50px;
-    filter: brightness(0) invert(1); /* Makes icons white */
+     transition: transform 0.3s ease;
+}
+
+.icon-link img { /* Styling for LinkedIn image */
+    width: 50px; /* Same size for both icons */
+    height: 50px;
     transition: transform 0.3s ease;
+}
+
+.icon-link-git img { /* Styling for GitHub image to match LinkedIn size */
+    width: 50px; /* Same size as LinkedIn */
+    height: 50px;
+    transition: transform 0.3s ease;
+    filter: brightness(0) invert(1); 
+
 }
 
 .social-links a:hover {

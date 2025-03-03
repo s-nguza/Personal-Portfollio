@@ -115,29 +115,55 @@ section {
     margin: 10px 0;
 }
 
+/* Bigger About Section */
 #about {
-    background-image: url("images/pexels-francesco-ungaro-998641.jpg"); /* Image path */
-    background-size: cover;            /* Ensures the image covers the entire section */
-    background-position: center;       /* Centers the image */
-    background-repeat: no-repeat;    
+    background-image: url("images/pexels-francesco-ungaro-998641.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     text-align: center;
-    max-width: 800px;       /* Limits the width to make the text more readable */
-    margin: 0 auto;         /* Centers the section horizontally */
-    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px; /* Increased padding */
+    opacity: 0; /* Start hidden */
+    transform: translateY(50px); /* Start lower */
+    animation: fadeInSlide 1.5s ease-out forwards; /* Run animation */
 }
 
+/* About Me Paragraph Animation */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#about p {
+    font-size: 1.2rem;
+}
+
+
+#about p {
+    font-size: 1.2rem;
+    animation: slideIn 1.5s ease-out;
+}
+/* 
 .badge-container {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     gap: 10px; /* Space between badges */
-    justify-content: center;
+    /* justify-content: center;
     padding: 20px;
-}
+} */
 
-.badge-container img {
+/* .badge-container img {
     display: inline-block;
-}
+} */ */
 
 
 .project h3 {
@@ -173,13 +199,41 @@ form button {
     padding: 50px 20px;
     text-align: center;
 }
-#skill{
+#skills {
     background-image: url("images/pexels-francesco-ungaro-998641.jpg"); /* Image path */
-    background-size: cover;            /* Ensures the image covers the entire section */
-    background-position: center;       /* Centers the image */
-    background-repeat: no-repeat; 
-
+    background-size: cover;           
+    background-position: center;       
+    background-repeat: no-repeat;
+    /* Increased padding for a bigger section */
+    text-align: center;
+    overflow: hidden; /* Prevents any spilling */
+    max-height: 300px;
 }
+
+#skills h2 {
+    font-size: 3rem; /* Make the heading bigger */
+    font-weight: bold;
+    text-align: center; /* Ensure heading is centered */
+    color: #007bff; /* Adjust color for visibility */
+    margin-bottom: 20px; /* Add spacing below heading */
+}
+
+/*  */
+
+/* Hide badges initially */
+.badge-container img {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Add animation class for appearing badges */
+.badge-container img.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 .project-container {
     display: flex;
@@ -228,4 +282,55 @@ footer {
     color: rgb(102, 59, 221);
     text-align: center;
     padding: 20px;
+}
+
+#contact {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Full height */
+    background-image: url("images/pexels-francesco-ungaro-998641.jpg"); /* Image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 50px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 30px; /* Space between icons */
+    align-items: center;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.social-links a i { /* Styling for WhatsApp icon */
+    font-size: 50px;
+    color: white;
+}
+
+.icon-link img { /* Styling for LinkedIn & GitHub images */
+    width: 50px; /* Adjust as needed */
+    height: 50px;
+    filter: brightness(0) invert(1); /* Makes icons white */
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2); /* Slight zoom effect */
 }

@@ -163,7 +163,7 @@ nav ul li a {
 }
 
 section {
-    padding: 50px 20px;
+    padding:  2px;
 }
 
 #home.background {
@@ -190,18 +190,17 @@ section {
 
 /* Bigger About Section */
 #about {
-    background-image: url("images/pexels-francesco-ungaro-998641.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url("images/pexels-francesco-ungaro-998641.jpg"); /* Image path */
+    background-size: cover;            /* Ensures the image covers the entire section */
+    background-position: center;       /* Centers the image */
+    background-repeat: no-repeat;    
+    padding: 50px 20px;
     text-align: center;
-    max-width: 900px;
-    padding: 40px; /* Reduced padding */
-    margin-top: -30px; /* Negative margin to pull it closer */
-    opacity: 0; /* Start hidden */
-    transform: translateY(50px); /* Start lower */
-    animation: fadeInSlide 1.5s ease-out forwards; /* Run animation */
+
+    transform: translateY(50px);
+    animation: fadeInSlide 1.5s ease-out forwards;
 }
+
 
 /* About Me Paragraph Animation */
 @keyframes fadeInSlide {
@@ -219,6 +218,13 @@ section {
     font-size: 1.2rem;
 }
 
+#about h2 {
+    font-size: 3rem; /* Make the heading bigger */
+    font-weight: bold;
+    text-align: center; /* Ensure heading is centered */
+    color: #007bff; /* Adjust color for visibility */
+    margin-bottom: 50px;
+}
 
 #about p {
     font-size: 1.2rem;
